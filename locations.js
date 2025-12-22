@@ -1,11 +1,6 @@
 exports.BattleLocationdex = {
     pallettown: {
         name:"Pallet Town",
-        waterslot1:"tentacool",
-        waterslot2:"tentacool",
-        waterslot3:"tentacool",
-        waterslot4:"tentacool",
-        waterslot5:"tentacool",
         oldrodslot1:"surskit",
         oldrodslot2:"surskit",
         goodrodslot1:"lotad",
@@ -16,6 +11,12 @@ exports.BattleLocationdex = {
         superrodslot3:"tympole",
         superrodslot4:"tympole",
         superrodslot5:"tympole",
+        waterslot1:"tentacool",
+        waterslot2:"tentacool",
+        waterslot3:"tentacool",
+        waterslot4:"tentacool",
+        waterslot5:"tentacool",
+        
     },
     route101: {
         name:"Route 101",
@@ -1990,4 +1991,5 @@ exports.BattleLocationdex = {
     },
 
 };
+
 
