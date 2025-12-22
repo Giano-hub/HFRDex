@@ -1,11 +1,11 @@
 exports.BattleLocationdex = {
-    littleroottown: {
-        name:"Littleroot Town",
-        waterslot1:"squirtle",
-        waterslot2:"totodile",
-        waterslot3:"oshawott",
-        waterslot4:"sobble",
-        waterslot5:"sobble",
+    pallettown: {
+        name:"Pallet Town",
+        waterslot1:"tentacool",
+        waterslot2:"tentacool",
+        waterslot3:"tentacool",
+        waterslot4:"tentacool",
+        waterslot5:"tentacool",
         fishslot1:"surskit",
         fishslot2:"surskit",
         fishslot3:"lotad",
@@ -1988,4 +1988,5 @@ exports.BattleLocationdex = {
         waterslot4:"kabutops",
         waterslot5:"dhelmise",
     },
+
 };
