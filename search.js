@@ -598,39 +598,56 @@
 
 		return buf;
 	};
-	Search.prototype.renderLocationRow = function (move, matchStart, matchLength, errorMessage, attrs) {
-		if (!attrs) attrs = '';
-		if (!move) return '<li class="result">Unrecognized move</li>';
-		var id = toID(move.name);
-		if (Search.urlRoot) attrs += ' href="' + Search.urlRoot + 'locations/' + id + '" data-target="push"';
-		var buf = '<li class="result"><a' + attrs + ' data-entry="move|' + BattleLog.escapeHTML(move.name) + '">';
-		// name
-		var name = move.name;
-		var tagStart = (name.substr(0, 12) === 'Hidden Power' ? 12 : 0);
-		if (tagStart) name = name.substr(0, tagStart);
-		if (matchLength) {
-			name = name.substr(0, matchStart) + '<b>' + name.substr(matchStart, matchLength) + '</b>' + name.substr(matchStart + matchLength);
-		}
-		if (tagStart) {
-			if (matchLength && matchStart + matchLength > tagStart) {
-				if (matchStart < tagStart) {
-					matchLength -= tagStart - matchStart;
-					matchStart = tagStart;
-				}
-				name += '<small>' + move.name.substr(tagStart, matchStart - tagStart) + '<b>' + move.name.substr(matchStart, matchLength) + '</b>' + move.name.substr(matchStart + matchLength) + '</small>';
-			} else {
-				name += '<small>' + move.name.substr(tagStart) + '</small>';
-			}
-		}
-		buf += '<span class="col movenamecol">' + name + '</span> ';
+	Search.prototype.renderLocationRow = function (entry, matchStart, matchLength, errorMessage, attrs) {
+    if (!attrs) attrs = '';
+    if (!entry) return '<li class="result">Unrecognized location</li>';
 
-		// type
-		buf += '<span class="col typecol">';
-		buf += '</span> ';
-		buf += '</a></li>';
+    // id della location
+    let id = toID(entry.name);
+    if (Search.urlRoot) attrs += ' href="' + Search.urlRoot + 'locations/' + id + '" data-target="push"';
 
-		return buf;
-	};
+    let buf = '<li class="result"><a' + attrs + '>';
+
+    // nome location
+    let name = entry.name;
+    if (matchLength) {
+        name =
+            name.substr(0, matchStart) +
+            '<b>' + name.substr(matchStart, matchLength) + '</b>' +
+            name.substr(matchStart + matchLength);
+    }
+
+    buf += '<span class="col movenamecol">' + name + '</span>';
+
+    // sprite Pokémon (SE PRESENTI)
+    buf += '<span class="col iconcol">';
+
+    // cerca quali pokémon appaiono qui
+    let loc = BattleLocationdex[entry.name];
+    if (loc) {
+        let mons = [];
+
+        // estrai ogni campo {poke: %, poke: %, ecc...}
+        for (let key in loc) {
+            if (Array.isArray(loc[key])) {
+                loc[key].forEach(slot => {
+                    mons.push(slot.pokemon);
+                });
+            }
+        }
+
+        // aggiungi sprite
+        mons.forEach((p) => {
+            let sprite = "https://raw.githubusercontent.com/May8th1995/sprites/master/" + p + ".png";
+            buf += '<img class="loc-sprite" src="' + sprite + '" style="width:30px;height:30px;"> ';
+        });
+    }
+
+    buf += '</span>';
+
+    buf += '</a></li>';
+    return buf;
+    };
 
 	Search.prototype.renderMoveRow = function (move, matchStart, matchLength, errorMessage, attrs) {
 		if (!attrs) attrs = '';
