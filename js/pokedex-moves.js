@@ -558,9 +558,9 @@ var PokedexMovePanel = PokedexResultPanel.extend({
 				return '<h3>Tutor</h3>';
 			case 'D': // egg move
 				return '<h3>Egg</h3>';
-			case 'E': // event
+			case 'G': // event
 				return '<h3>Event</h3>';
-			case 'F': // past gen
+			case 'H': // past gen
 				return '<h3>Past generation only</h3>';
 			}
 			return '<pre>error: "'+results[i]+'"</pre>';
@@ -581,10 +581,10 @@ var PokedexMovePanel = PokedexResultPanel.extend({
 			case 'd': // egg move
 				desc = '<span class="picon" style="margin-top:-12px;'+Dex.getPokemonIcon('egg')+'"></span>';
 				break;
-			case 'e': // event
+			case 'g': // event
 				desc = '!';
 				break;
-			case 'f': // past generation
+			case 'h': // past generation
 				desc = '...';
 				break;
 			}
@@ -887,10 +887,10 @@ var PokedexLocationPanel = PokedexResultPanel.extend({
 			case 'd': // egg move
 				desc = results[i].substr(1,3).replace("z","");
 				break;
-			case 'e': // event
+			case 'g': // event
 				desc = '!';
 				break;
-			case 'f': // past generation
+			case 'h': // past generation
 				desc = '...';
 				break;
 			}
