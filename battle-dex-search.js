@@ -826,27 +826,31 @@ var BattleTypedSearch = /** @class */ (function () {
             if (location.landslot12 === speciesid)
                 return true;
         }
-        if (typeof location.fishslot1 !== 'undefined') {
-            if (location.fishslot1 === speciesid)
+        if (typeof location.oldrodslot1 !== 'undefined') {
+            if (location.oldrodslot1 === speciesid)
                 return true;
-            if (location.fishslot2 === speciesid)
+            if (location.oldrodslot2 === speciesid)
                 return true;
-            if (location.fishslot3 === speciesid)
+        }
+        if (typeof location.goodrodslot1 !== 'undefined') {   
+            if (location.goodrodslot1 === speciesid)
                 return true;
-            if (location.fishslot4 === speciesid)
+            if (location.goodrodslot2 === speciesid)
                 return true;
-            if (location.fishslot5 === speciesid)
+            if (location.goodrodslot3 === speciesid)
                 return true;
-            if (location.fishslot6 === speciesid)
+        }
+        if (typeof location.superrodslot1 !== 'undefined') {   
+            if (location.superrodslot1 === speciesid)
                 return true;
-            if (location.fishslot7 === speciesid)
+            if (location.superrodslot2 === speciesid)
                 return true;
-            if (location.fishslot8 === speciesid)
+            if (location.superrodslot3 === speciesid)
                 return true;
-            if (location.fishslot9 === speciesid)
+            if (location.superrodslot4 === speciesid)
                 return true;
-            if (location.fishslot10 === speciesid)
-                return true;
+            if (location.superrodslot5 === speciesid)
+                return true;    
         }
         if (typeof location.waterslot1 !== 'undefined') {
             if (location.waterslot1 === speciesid)
