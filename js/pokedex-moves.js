@@ -773,31 +773,35 @@ var PokedexLocationPanel = PokedexResultPanel.extend({
 			results.push('az4% '+ BattleLocationdex[moveid].landslot11);
 			results.push('az1% '+ BattleLocationdex[moveid].landslot12);
 		}
-		if (typeof BattleLocationdex[moveid].fishslot1 !== 'undefined') {
-			results.push('b20% '+ BattleLocationdex[moveid].fishslot1);
-			results.push('b20% '+ BattleLocationdex[moveid].fishslot2);
-			results.push('b10% '+ BattleLocationdex[moveid].fishslot3);
-			results.push('b10% '+ BattleLocationdex[moveid].fishslot4);
-			results.push('b10% '+ BattleLocationdex[moveid].fishslot5);
-			results.push('b10% '+ BattleLocationdex[moveid].fishslot6);
-			results.push('b10% '+ BattleLocationdex[moveid].fishslot7);
-			results.push('bz5% '+ BattleLocationdex[moveid].fishslot8);
-			results.push('bz4% '+ BattleLocationdex[moveid].fishslot9);
-			results.push('bz1% '+ BattleLocationdex[moveid].fishslot10);
+		if (typeof BattleLocationdex[moveid].oldrodslot1 !== 'undefined') {
+			results.push('b70% '+ BattleLocationdex[moveid].oldrodslot1);
+			results.push('b30% '+ BattleLocationdex[moveid].oldrodslot2);	
+		}
+		if (typeof BattleLocationdex[moveid].goodrodslot1 !== 'undefined') {	
+			results.push('c60% '+ BattleLocationdex[moveid].goodrodslot1);
+			results.push('c20% '+ BattleLocationdex[moveid].goodrodslot2);
+			results.push('c20% '+ BattleLocationdex[moveid].goodrodslot3);	
+		}
+		if (typeof BattleLocationdex[moveid].superrodslot1 !== 'undefined') {		
+			results.push('d60% '+ BattleLocationdex[moveid].superrodslot1);
+			results.push('d30% '+ BattleLocationdex[moveid].superrodslot2);
+			results.push('dz5% '+ BattleLocationdex[moveid].superrodslot3);
+			results.push('dz4% '+ BattleLocationdex[moveid].superrodslot4);
+			results.push('dz1% '+ BattleLocationdex[moveid].superrodslot5);
 		}
 		if (typeof BattleLocationdex[moveid].waterslot1 !== 'undefined') {
-			results.push('c30% '+ BattleLocationdex[moveid].waterslot1);
-			results.push('c30% '+ BattleLocationdex[moveid].waterslot2);
-			results.push('c20% '+ BattleLocationdex[moveid].waterslot3);
-			results.push('c10% '+ BattleLocationdex[moveid].waterslot4);
-			results.push('c10% '+ BattleLocationdex[moveid].waterslot5);
+			results.push('e30% '+ BattleLocationdex[moveid].waterslot1);
+			results.push('e30% '+ BattleLocationdex[moveid].waterslot2);
+			results.push('e20% '+ BattleLocationdex[moveid].waterslot3);
+			results.push('e10% '+ BattleLocationdex[moveid].waterslot4);
+			results.push('e10% '+ BattleLocationdex[moveid].waterslot5);
 		}
 		if (typeof BattleLocationdex[moveid].rockslot1 !== 'undefined') {
-			results.push('d60% '+ BattleLocationdex[moveid].rockslot1);
-			results.push('d30% '+ BattleLocationdex[moveid].rockslot2);
-			results.push('dz5% '+ BattleLocationdex[moveid].rockslot3);
-			results.push('dz4% '+ BattleLocationdex[moveid].rockslot4);
-			results.push('dz1% '+ BattleLocationdex[moveid].rockslot5);
+			results.push('f60% '+ BattleLocationdex[moveid].rockslot1);
+			results.push('f30% '+ BattleLocationdex[moveid].rockslot2);
+			results.push('fz5% '+ BattleLocationdex[moveid].rockslot3);
+			results.push('fz4% '+ BattleLocationdex[moveid].rockslot4);
+			results.push('fz1% '+ BattleLocationdex[moveid].rockslot5);
 		}
 		var last = '';
 		for (var i=0; i<results.length; i++) {
