@@ -6,16 +6,16 @@ exports.BattleLocationdex = {
         waterslot3:"tentacool",
         waterslot4:"tentacool",
         waterslot5:"tentacool",
-        fishslot1:"surskit",
-        fishslot2:"surskit",
-        fishslot3:"lotad",
-        fishslot4:"lotad",
-        fishslot5:"finneon",
-        fishslot6:"finneon",
-        fishslot7:"tympole",
-        fishslot8:"tympole",
-        fishslot9:"tympole",
-        fishslot10:"tympole",
+        oldrodslot1:"surskit",
+        oldrodslot2:"surskit",
+        goodrodslot1:"lotad",
+        goodrodslot2:"lotad",
+        goodrodslot3:"finneon",
+        superrodslot1:"finneon",
+        superrodslot2:"tympole",
+        superrodslot3:"tympole",
+        superrodslot4:"tympole",
+        superrodslot5:"tympole",
     },
     route101: {
         name:"Route 101",
@@ -1990,3 +1990,4 @@ exports.BattleLocationdex = {
     },
 
 };
+
