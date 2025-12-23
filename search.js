@@ -602,7 +602,6 @@
     if (!attrs) attrs = '';
     if (!entry) return '<li class="result">Unrecognized location</li>';
 
-    // id della location
     let id = toID(entry.name);
     if (Search.urlRoot) attrs += ' href="' + Search.urlRoot + 'locations/' + id + '" data-target="push"';
 
@@ -612,34 +611,32 @@
     let name = entry.name;
     if (matchLength) {
         name =
-            name.substr(0, matchStart) +
-            '<b>' + name.substr(matchStart, matchLength) + '</b>' +
-            name.substr(matchStart + matchLength);
+            name.substring(0, matchStart) +
+            '<b>' + name.substring(matchStart, matchLength) + '</b>' +
+            name.substring(matchStart + matchLength);
     }
 
     buf += '<span class="col movenamecol">' + name + '</span>';
 
-    // sprite Pokémon (SE PRESENTI)
+    // colonna sprite
     buf += '<span class="col iconcol">';
 
-    // cerca quali pokémon appaiono qui
     let loc = BattleLocationdex[entry.name];
     if (loc) {
         let mons = [];
 
-        // estrai ogni campo {poke: %, poke: %, ecc...}
+        // raccogli lista pokemon presenti
         for (let key in loc) {
             if (Array.isArray(loc[key])) {
-                loc[key].forEach(slot => {
+                for (let slot of loc[key]) {
                     mons.push(slot.pokemon);
-                });
+                }
             }
         }
 
-        // aggiungi sprite
-        mons.forEach((p) => {
-            let sprite = "https://raw.githubusercontent.com/May8th1995/sprites/master/" + p + ".png";
-            buf += '<img class="loc-sprite" src="' + sprite + '" style="width:30px;height:30px;"> ';
+        // genera sprite IN STILE SHOWDOWN
+        mons.forEach(p => {
+            buf += '<span class="picon" style="' + Dex.getPokemonIcon(p) + '"></span>';
         });
     }
 
