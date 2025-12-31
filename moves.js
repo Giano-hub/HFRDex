@@ -4090,9 +4090,9 @@ exports.BattleMovedex = {
     },
     eggbomb: {
         num: 121,
-        accuracy: 75,
-        basePower: 100,
-        category: "Physical",
+        accuracy: 100,
+        basePower: 120,
+        category: "Special",
         isNonstandard: "Past",
         name: "Egg Bomb",
         pp: 10,
@@ -4102,12 +4102,13 @@ exports.BattleMovedex = {
             protect: 1,
             mirror: 1
         },
+        recoil: [33, 100],
         secondary: null,
         target: "normal",
-        type: "Normal",
+        type: "Grass",
         contestType: "Cute",
-        desc: "No additional effect.",
-        shortDesc: "No additional effect."
+        desc: "If the target lost HP, the user takes recoil damage equal to 33% the HP lost by the target, rounded half up, but not less than 1 HP.",
+        shortDesc: "Has 33% recoil."
     },
     electricterrain: {
         num: 604,
