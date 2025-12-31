@@ -1,23 +1,23 @@
 exports.BattleLearnsets = {
-  "bulbasaur": {
-    learnset: {
-      "tackle": ["9L1"],
-      "growl": ["9L4"],
-      "razor leaf": ["9L7"],
-      "sludge": ["9L10"],
-      "toxic": ["9L13"],
-      "synthesis": ["9L13"],
-      "mega drain": ["9L15"],
-      "sleep powder": ["9L17"],
-      "toxic": ["9L18"],
-      "synthesis": ["9L19"],
-      "mega drain": ["9L20"],
-      "magical leaf": ["9L21"],
-      "synthesis": ["9L39"],
-      "gunk shot": ["9L40"],
-      "giga drain": ["9L42"],
-      "egg bomb": ["9L56"],
-      "toxic": ["9L72"],
+  bulbasaur: {
+     learnset: {
+       tackle: ["9L1"],
+       growl: ["9L4"],
+       razorleaf: ["9L7"],
+       sludge: ["9L10"],
+       toxic: ["9L13"],
+       synthesis: ["9L13"],
+       megadrain: ["9L15"],
+       sleeppowder: ["9L17"],
+       toxic: ["9L18"],
+       synthesis: ["9L19"],
+       megadrain: ["9L20"],
+       magicalleaf: ["9L21"],
+       synthesis: ["9L39"],
+       gunkshot: ["9L40"],
+       gigadrain: ["9L42"],
+       eggbomb: ["9L56"],
+       toxic: ["9L72"],
     }
   },
   "ivysaur": {
